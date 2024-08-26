@@ -3,7 +3,6 @@ using CountriesProvider;
 using Infrastructure;
 using Mapster;
 using Microsoft.ApplicationInsights;
-using Microsoft.ApplicationInsights.AspNetCore;
 using Microsoft.ApplicationInsights.Extensibility;
 using Observability.Application.Commands;
 using Observability.Application.Queries;

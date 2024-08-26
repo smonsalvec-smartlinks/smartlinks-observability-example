@@ -41,6 +41,8 @@ public class SessionTelemetryInitializer( IHttpContextAccessor httpContextAccess
             telemetry.Context.User.Id = userIdElement.GetString() ?? string.Empty;
             telemetry.Context.User.AuthenticatedUserId = root.GetProperty( "email" ).GetString() ?? string.Empty;
             telemetry.Context.User.AccountId = root.GetProperty( "name" ).GetString() ?? string.Empty;
+            telemetry.Context.Properties.Add( "Agency Id", root.GetProperty( "agencyId" ).GetString() ?? string.Empty );
+            telemetry.Context.Properties.Add( "Agency Name", root.GetProperty( "agencyName" ).GetString() ?? string.Empty );
         }
     }
 }
